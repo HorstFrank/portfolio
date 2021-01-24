@@ -1,25 +1,365 @@
 // Your variable overrides
 // See node_modules/bootstrap/scss/_variables.scss for all variables
 
-$body-bg: #ddd;
-$body-color: #222;
-$primary: hotpink;
-$font-family-base: Arial;
+// BOOTSTRAP Vars
+$body-bg: rgb(247, 245, 245);
+// $body-color: #222;
+$primary: rgb(139, 86, 172);
+// $primary: rgb(105, 175, 255);
+// $font-family-base: Arial;
 
+$linkcolor: #2497e4;
+
+// Meine Vars
+$breakpoint: 710px;
+$personcontent_body_bg: rgb(218, 202, 228);
+// $personcontent_body_bg: rgb(201, 201, 201);
+$personcontent_font_color: rgb(66, 66, 66);
+$personcontent_trenner: rgb(195, 181, 204);
+$personcontent_width: 250px;
+$person_container_border_radius: 20px;
+$person_container_padding: 20px;
+$person_container_height: 200px; // $kenntnisse_color = green;
+// $basecolor1: blue;
+// $spacer: 1;
 // Include all Bootstrap
 @import "~bootstrap/scss/bootstrap";
+// INclude Fonts
+@import "assets/fonts/fontawesome/css/all.css";
 
-// Add you custom CSS
+@font-face {
+  font-family: "Yeseva_one";
+  src: url(assets/fonts/yeseva_one/YesevaOne-Regular.ttf);
+}
 
-.fancy {
-  display: inline-block;
-  background: rgb(131, 58, 180);
-  background: linear-gradient(
-    90deg,
-    rgba(131, 58, 180, 1) 0%,
-    rgba(253, 29, 29, 1) 50%,
-    rgba(252, 176, 69, 1) 100%
-  );
-  color: #fff;
-  padding: 0.5em;
+// CSS defs
+
+html,
+body {
+  height: 100%;
+  // font-family: "Yeseva_one";
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Yeseva_one";
+  // font-size: 23px;
+  margin-top: 2em;
+  color: #575757;
+}
+
+.dev {
+  background-color: lightcoral;
+}
+
+.color-php {
+  background-color: none;
+  border: 1px $personcontent_font_color solid;
+  color: $personcontent_font_color;
+  // border: 2px rgb(102, 99, 243) solid;
+}
+.color-js {
+  background-color: none;
+  border: 1px $personcontent_font_color solid;
+  color: $personcontent_font_color;
+  // border: 2px rgb(226, 215, 114) solid;
+  // background-color: rgb(226, 215, 114);
+}
+.color-react {
+  background-color: none;
+  border: 1px $personcontent_font_color solid;
+  color: $personcontent_font_color;
+  // border: 2px rgb(77, 180, 248) solid;
+  // background-color: rgb(77, 180, 248);
+}
+
+.iconcircle {
+  background-color: $primary;
+  border-radius: 50%;
+  padding: 0.405em 0.4em 0.5em 0.55em;
+  font-size: 0.7em;
+  margin: 0px 0.4em;
+  opacity: 0.5;
+  width: 2.1em;
+  height: 2.1em;
+}
+
+.contenticoncircle {
+  background-color: $primary;
+  border-radius: 50%;
+  // padding: 0.405em 0.4em 0.5em 0.55em;
+  padding: 0.6em 0.5em 0.4em 0.5em;
+  font-size: 0.7em;
+  position: relative;
+  top: -0.15em;
+  // margin-bottom: 2em;
+  width: 2.1em;
+  height: 2.1em;
+  color: white;
+}
+
+.contact-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  // align: center;
+  margin-top: 5px;
+}
+.contact-line a {
+  color: $personcontent_body_bg;
+  // align-items: flex-start;
+}
+.contact-line a:hover {
+  // color: $personcontent_body_bg;
+  // align-items: flex-start;
+  opacity: 0.9;
+  transform: scale(1.2);
+}
+
+.round-corners {
+}
+
+.content-logo {
+  max-width: 100px;
+  border: $primary 2.5px solid;
+  border-radius: 4px;
+  // border-color: $primary;
+  margin: 10px 0px;
+}
+
+.namecontainer {
+}
+.name {
+  font-family: "Yeseva_one";
+  font-size: 23px;
+  text-align: center;
+}
+.namesub {
+  text-align: center;
+  font-size: 13px;
+}
+.person-description {
+  text-align: center;
+  font-size: 11px;
+}
+
+.description {
+  text-align: center;
+  font-size: 11px;
+}
+
+.ori {
+}
+
+.content {
+  padding: 0px 40px;
+}
+
+.personcontainer {
+  display: flex;
+
+  // background-image: url("../public/images/sun_stripes.png");
+
+  // position: sticky;
+  // top: 0px;
+  background-color: $personcontent_body_bg;
+  // border-radius: $person_container_border_radius;
+  // border-radius: $person_container_border_radius;
+  padding: $person_container_padding;
+  color: $personcontent_font_color;
+  align-items: center;
+}
+
+.center-div-content {
+  display: block;
+  margin: 0px auto;
+}
+
+.person-image {
+  width: 80%;
+  // width: $personcontent_width - ($person_container_padding * 2);
+  border-radius: 50%;
+  margin-top: 4px;
+  // margin: 0px auto;
+  // align: center;
+  // display: block;
+  // margin: auto;
+  border: 3px $personcontent_font_color solid;
+}
+
+.kenntnisse-line {
+  display: flex;
+  flex-direction: row;
+  // justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
+  // justify-content: space-evenly;
+  margin: 0.4em 0em 0em 0em;
+}
+
+.kenntnisse-circle {
+  // background-color: lightcoral;
+  // display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 1.3em;
+  border-radius: 50%;
+  // border: 2px green solid;
+  // padding: 9px 0px;
+  // margin: auto 0em;
+  margin: 0.1em 0.1em;
+  // position: relative;
+  // top: 10px;
+  text-align: center;
+}
+.kenntnisse-circle a > i {
+  vertical-align: bottom;
+  color: $personcontent_font_color;
+  // color: $personcontent_body_bg;
+}
+
+.kenntnisse-circle a > span {
+  // vertical-align: bottom;
+  color: $personcontent_font_color;
+  // color: white;
+  font-size: 0.5em;
+  // color: $personcontent_body_bg;
+}
+
+.kenntnisse-circle a {
+  // text-decoration: none;
+}
+
+.projekt-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-size: 11px;
+}
+
+.projekt {
+  display: block;
+  background-color: $primary;
+  color: white;
+  border-radius: 3px;
+  padding: 3px 9px;
+  margin-top: 5px;
+}
+
+.personcontainer-space {
+  height: 20px;
+}
+
+// schmal
+@media (max-width: $breakpoint) {
+  .content-spacer {
+    height: $person_container_height;
+  }
+
+  .personcontainer-personinfo {
+    width: 35%;
+    display: flex;
+  }
+  .personcontainer-subinfo {
+    width: 50%;
+  }
+
+  .projekt-line {
+    // font-size: 4px;
+  }
+  .name {
+    font-size: 20px;
+    line-height: 19px;
+  }
+  .namesub {
+    font-size: 12px;
+  }
+
+  .person-description {
+    display: none;
+  }
+
+  .description {
+    // display: inline;
+    font-size: 10px;
+  }
+
+  .personcontainer {
+    width: 100%;
+    height: $person_container_height;
+    flex-direction: row;
+    // background-color: $primary;
+    justify-content: space-around;
+    border-radius: 0px 0px $person_container_border_radius
+      $person_container_border_radius;
+  }
+  .content-wrapper {
+    // padding-left: 0px;
+  }
+  .contact-line {
+    flex-direction: column;
+  }
+  .trenner {
+    width: 0.5px;
+    height: 100%;
+    background-color: $personcontent_trenner;
+    margin: auto 2px;
+  }
+  .kenntnisse-circle {
+    // transform: scale(0.7);
+    // background-color: lightcoral;
+    // display: block;
+    width: 25px;
+    height: 25px;
+    font-size: 0.8em;
+    border-radius: 50%;
+    // margin: 0em 0em;
+    // padding: 9px 0px;
+    // margin: auto 0em;
+    // position: relative;
+    // top: 10px;
+    text-align: center;
+  }
+}
+
+@media (min-width: $breakpoint) {
+  .personcontainer {
+    width: $personcontent_width;
+    height: 100%;
+    flex-direction: column;
+    border-radius: 0px $person_container_border_radius
+      $person_container_border_radius 0px;
+    // background-color: $primary;
+    // box-shadow: 10px 0px 200px rgb(199, 199, 199);
+  }
+
+  .name {
+    font-size: 25px;
+    letter-spacing: -0.015em;
+    // line-height: 19px;
+  }
+
+  .person-image {
+    width: 60%;
+    border: 5px $personcontent_font_color solid;
+  }
+  .person-description {
+    // display: inline;
+  }
+
+  .content-wrapper {
+    padding-left: $personcontent_width;
+  }
+  .contact-line {
+    flex-direction: row;
+  }
+  .trenner {
+    width: 50%;
+    height: 1px;
+    background-color: $personcontent_trenner;
+    margin: 1em auto;
+  }
 }
