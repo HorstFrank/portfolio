@@ -54,28 +54,91 @@ h4 {
   background-color: lightcoral;
 }
 
-.color-php {
-  background-color: none;
-  border: 1px $personcontent_font_color solid;
-  color: $personcontent_font_color;
-  // border: 2px rgb(102, 99, 243) solid;
-}
-.color-js {
-  background-color: none;
-  border: 1px $personcontent_font_color solid;
-  color: $personcontent_font_color;
-  // border: 2px rgb(226, 215, 114) solid;
-  // background-color: rgb(226, 215, 114);
-}
-.color-react {
-  background-color: none;
-  border: 1px $personcontent_font_color solid;
-  color: $personcontent_font_color;
-  // border: 2px rgb(77, 180, 248) solid;
-  // background-color: rgb(77, 180, 248);
+// -------------------------
+// kenntnisse kreise
+
+.kenntnisse-line {
+  display: flex;
+  flex-direction: row;
+  // justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
+  // justify-content: space-evenly;
+  margin: 0.4em 0em 0em 0em;
 }
 
-.iconcircle {
+.kenntnisse-circle {
+  // background-color: lightcoral;
+  // display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 1.3em;
+  border-radius: 50%;
+  // border: 2px green solid;
+  // padding: 9px 0px;
+  // margin: auto 0em;
+  margin: 0.1em 0.1em;
+  // position: relative;
+  // top: 10px;
+  text-align: center;
+
+  background-color: none;
+  border: 1px $personcontent_font_color solid;
+  // color: $personcontent_font_color;
+}
+.kenntnisse-circle a > i {
+  vertical-align: bottom;
+  color: $personcontent_font_color;
+  // color: $personcontent_body_bg;
+  // color: red;
+}
+
+.kenntnisse-circle a > span {
+  // vertical-align: bottom;
+  color: $personcontent_font_color;
+  // color: white;
+  font-size: 0.5em;
+  // color: $personcontent_body_bg;
+}
+
+.kenntnisse-circle a {
+  // text-decoration: none;
+  text-decoration: none;
+}
+
+// .color-php {
+//   background-color: none;
+//   border: 1px $personcontent_font_color solid;
+//   color: $personcontent_font_color;
+//   // border: 2px rgb(102, 99, 243) solid;
+// }
+// .color-js {
+//   background-color: none;
+//   border: 1px $personcontent_font_color solid;
+//   color: $personcontent_font_color;
+//   // border: 2px rgb(226, 215, 114) solid;
+//   // background-color: rgb(226, 215, 114);
+// }
+// .color-react {
+//   background-color: none;
+//   border: 1px $personcontent_font_color solid;
+//   color: $personcontent_font_color;
+//   // border: 2px rgb(77, 180, 248) solid;
+//   // background-color: rgb(77, 180, 248);
+// }
+
+// ---------------------------------
+// contact circles
+
+.contact-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  // align: center;
+  margin-top: 5px;
+}
+
+.contact-icon-circle {
   background-color: $primary;
   border-radius: 50%;
   padding: 0.405em 0.4em 0.5em 0.55em;
@@ -86,27 +149,20 @@ h4 {
   height: 2.1em;
 }
 
-.contenticoncircle {
-  background-color: $primary;
-  border-radius: 50%;
-  // padding: 0.405em 0.4em 0.5em 0.55em;
-  padding: 0.6em 0.5em 0.4em 0.5em;
-  font-size: 0.7em;
-  position: relative;
-  top: -0.15em;
-  // margin-bottom: 2em;
-  width: 2.1em;
-  height: 2.1em;
-  color: white;
-}
+// .contact-icon-circleXXXXXXXX {
+//   background-color: $primary;
+//   border-radius: 50%;
+//   // padding: 0.405em 0.4em 0.5em 0.55em;
+//   padding: 0.6em 0.5em 0.4em 0.5em;
+//   font-size: 0.7em;
+//   position: relative;
+//   top: -0.15em;
+//   // margin-bottom: 2em;
+//   width: 2.1em;
+//   height: 2.1em;
+//   color: white;
+// }
 
-.contact-line {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  // align: center;
-  margin-top: 5px;
-}
 .contact-line a {
   color: $personcontent_body_bg;
   // align-items: flex-start;
@@ -116,6 +172,24 @@ h4 {
   // align-items: flex-start;
   opacity: 0.9;
   transform: scale(1.2);
+}
+
+//----------
+// content-icon-circle
+
+.content-icon-circle {
+  background-color: $primary;
+  // background-color: $primary;
+  border-radius: 50%;
+  padding: 0.65em 0.5em 0.5em 0.5em;
+  font-size: 0.7em;
+  margin: 0px 0.2em 0em 0em;
+  // opacity: 0.5;
+  width: 2.1em;
+  height: 2.1em;
+
+  color: $body-bg;
+  // color: $body-color;
 }
 
 .round-corners {
@@ -187,49 +261,6 @@ h4 {
   // display: block;
   // margin: auto;
   border: 3px $personcontent_font_color solid;
-}
-
-.kenntnisse-line {
-  display: flex;
-  flex-direction: row;
-  // justify-content: space-evenly;
-  flex-wrap: wrap;
-  justify-content: center;
-  // justify-content: space-evenly;
-  margin: 0.4em 0em 0em 0em;
-}
-
-.kenntnisse-circle {
-  // background-color: lightcoral;
-  // display: block;
-  width: 40px;
-  height: 40px;
-  font-size: 1.3em;
-  border-radius: 50%;
-  // border: 2px green solid;
-  // padding: 9px 0px;
-  // margin: auto 0em;
-  margin: 0.1em 0.1em;
-  // position: relative;
-  // top: 10px;
-  text-align: center;
-}
-.kenntnisse-circle a > i {
-  vertical-align: bottom;
-  color: $personcontent_font_color;
-  // color: $personcontent_body_bg;
-}
-
-.kenntnisse-circle a > span {
-  // vertical-align: bottom;
-  color: $personcontent_font_color;
-  // color: white;
-  font-size: 0.5em;
-  // color: $personcontent_body_bg;
-}
-
-.kenntnisse-circle a {
-  // text-decoration: none;
 }
 
 .projekt-line {
